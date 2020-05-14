@@ -12,7 +12,7 @@
   <body>
     <div class="container">
       <h1>File Upload</h1>
-      <%= typeof msg != 'undefined' ? msg : '' ; %>
+      <%= typeof msg != 'undefined' ? msg : ''%>
       <form action="/upload" method="POST" enctype="multipart/form-data">
         <div class="file-field input-field">
           <div class="btn grey">
@@ -25,6 +25,12 @@
         </div>
         <button type="submit" class="btn">Submit</button>
       </form>
+      <br />
+      <img
+        src="<%= typeof file != 'undefined' ? file : '' %>"
+        class="responsive-img"
+        alt="img"
+      />
     </div>
 
     <script
