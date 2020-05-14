@@ -1,4 +1,4 @@
-# Patrick's Project (using Express, Materialize css, Multer, JQuery)
+# Patrick's Project (using Express, Materialize css, Multer, EJS)
 
 1. Re-code by me
 
