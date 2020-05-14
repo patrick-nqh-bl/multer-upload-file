@@ -17,6 +17,7 @@ const storage = multer.diskStorage({
 // Init Upload
 const upload = multer({
   storage: storage,
+  limits: { fieldSize: 1000000 },
 }).single('myImage');
 
 // Init app
@@ -33,9 +34,7 @@ app.get('/', (req, res) => res.render('index'));
 app.post('/upload', (req, res) => {
   upload(req, res, (err) => {
     if (err) {
-      res.render('index', {
-        msg: err,
-      });
+      res.render('index', { msg: err });
     } else {
       console.log(req.file);
       res.send('test');
